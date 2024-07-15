@@ -1,0 +1,20 @@
+
+Everything worked. 
+All of the files were excuted as expected.
+
+
+
+
+Q1. Suppose you were given an object module (with no access to source code) that sorted an array of integers very efficiently. However, the sort function in the object module must be invoked with the following signature:
+betterSort(int data[], first, last);
+where the array to sort is data and the parameters first and last give the indices of the portion of the array that is to be sorted.
+How could you write a mySort() function with the signature used in this lab that could exploit the better sorting function in the supplied object module? 
+
+
+ANS: 
+I would use the betterSort function inside the mySort function; inwhich I will assign "0" as the first index and "(n-1)" as the last index.
+
+void mySort(int d[], int n){
+betterSort(data, 0, n-1);}
+
+the last index in (n-1) because "n" is the number of elements (size of the array) so the last index is (n-1).
